@@ -14,8 +14,14 @@ export default function LandingSection() {
   return (
     <>
       <section id="home">
-        <Box sx={{ height: "80vh", bgcolor: "black" }}>
-          <Grid align="center" sx={{ margin: "20px" }}>
+        <Box
+          sx={{
+            height: "80vh",
+            bgcolor: "#1565c0",
+            backgroundImage: "/assets/Code.jpg",
+          }}
+        >
+          <Grid align="center" sx={{ margin: "0 20px" }}>
             <Typography variant="h2" sx={{ color: "#fff", padding: "60px" }}>
               Welcome to Activated <br /> Operations
             </Typography>
@@ -27,6 +33,7 @@ export default function LandingSection() {
       </section>
       <Box
         sx={{
+          bgcolor: "#1565c0",
           padding: "5px",
           marginTop: "-130px",
           marginLeft: "30px",
@@ -53,7 +60,7 @@ export default function LandingSection() {
 
         {/*-----------------Card 2--------------------*/}
         <Card sx={{ minWidth: 275, height: "50%", margin: "30px" }}>
-          <CardContent >
+          <CardContent>
             <Typography sx={{ fontSize: 18 }} gutterBottom>
               Volunteers
             </Typography>
@@ -69,7 +76,7 @@ export default function LandingSection() {
         <Card sx={{ minWidth: 275, height: "50%", margin: "30px" }}>
           <CardContent>
             <Typography sx={{ fontSize: 14 }} gutterBottom>
-              Word of the Day
+              Chat with us
             </Typography>
             <Typography sx={{ mb: 1.5 }}>adjective</Typography>
             <Typography variant="body2">

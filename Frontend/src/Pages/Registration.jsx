@@ -8,11 +8,11 @@ export default function SimpleContainer() {
     margin: "100px auto",
   };
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const openUp=()=>{
-  navigate('/home');
-}
+  function handleClick() {
+    navigate("/home");
+  }
 
   return (
     <Grid container sx={{ gap: 2 }} id="registration">
@@ -60,7 +60,13 @@ const openUp=()=>{
             display: "flex",
           }}
         >
-          <Button id="btn" variant="contained" fullWidth sx={{ m: 2 }} onClick={openUp}>
+          <Button
+            id="btn"
+            variant="contained"
+            fullWidth
+            sx={{ m: 2 }}
+            onClick={handleClick}
+          >
             Sign Up
           </Button>
         </Box>
@@ -94,7 +100,12 @@ const openUp=()=>{
             display: "flex",
           }}
         >
-          <Button variant="contained" fullWidth sx={{ m: 2 }}>
+          <Button
+            variant="contained"
+            fullWidth
+            sx={{ m: 2 }}
+            onClick={handleClick}
+          >
             Log in
           </Button>
         </Box>
