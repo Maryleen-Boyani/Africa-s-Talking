@@ -1,17 +1,37 @@
 import { Grid, Paper, Typography, TextField, Button, Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
+//import { useState, useContext } from "react";
+//import AuthContext from "../context/AuthContext";
 export default function SimpleContainer() {
   const paperStyle = {
     padding: "30px 20px",
     width: "300px",
     margin: "100px auto",
   };
+  {
+    /* 
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
 
+  const { registerUser } = useContext(AuthContext);
+
+  console.log(email);
+  console.log(username);
+  console.log(password);
+  console.log(password2);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    registerUser(email, username, password, password2);
+  };
+  */
+  }
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate("/home");
+    navigate("/volunteer");
   }
 
   return (
@@ -30,6 +50,7 @@ export default function SimpleContainer() {
           fullWidth
           variant="standard"
           placeholder="Enter your name"
+          /*onChange={(e) => setUsername(e.target.value)}*/
         />
         <TextField
           id="standard-basic"
@@ -37,6 +58,7 @@ export default function SimpleContainer() {
           fullWidth
           variant="standard"
           placeholder="Enter your email address"
+          /*onChange={(e) => setEmail(e.target.value)}*/
         />
         <TextField
           id="standard-basic"
@@ -45,6 +67,7 @@ export default function SimpleContainer() {
           variant="standard"
           type="password"
           autoComplete="current-password"
+          /*onChange={(e) => setPassword(e.target.value)}*/
         />
         <TextField
           id="standard-basic"
@@ -52,6 +75,7 @@ export default function SimpleContainer() {
           fullWidth
           type="password"
           variant="standard"
+          /*onChange={(e) => setPassword2(e.target.value)}*/
         />
         <Box
           sx={{
@@ -65,7 +89,7 @@ export default function SimpleContainer() {
             variant="contained"
             fullWidth
             sx={{ m: 2 }}
-            onClick={handleClick}
+            //onClick={handleSubmit}
           >
             Sign Up
           </Button>

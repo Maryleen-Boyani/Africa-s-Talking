@@ -1,10 +1,24 @@
 import { Box, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+  const handleItemClick = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const navigate = useNavigate();
+  function handleClick(){
+    navigate("/volunteer")
+  }
+  function handleRegistration(){
+    navigate("/registration")
+  }
   return (
     <Box
       sx={{
-        
         display: "flex",
         justifyContent: "space-between",
         margin: "10px",
@@ -12,7 +26,9 @@ export default function Footer() {
       }}
     >
       <Box>
-        <Typography variant="h6">Your Logo</Typography>
+        <Typography variant="h6" sx={{ marginLeft: 2 }}>
+          ActivatedOps
+        </Typography>
       </Box>
       <Box
         sx={{
@@ -21,17 +37,18 @@ export default function Footer() {
           justifyContent: "flex-end",
         }}
       >
-        <Button>
+        <Button onClick={() => handleItemClick("home")}>
           <Typography variant="h6">Home</Typography>
         </Button>
-        <Button>
+        <Button onClick={() => handleItemClick("about")}>
           <Typography variant="h6">About</Typography>
         </Button>
-        <Button>
-          <Typography variant="h6">Help</Typography>
+
+        <Button onClick={handleRegistration}>
+          <Typography variant="h6">Register</Typography>
         </Button>
-        <Button>
-          <Typography variant="h6">Registration</Typography>
+        <Button onClick={handleClick}>
+          <Typography variant="h6">Volunteer</Typography>
         </Button>
       </Box>
     </Box>
