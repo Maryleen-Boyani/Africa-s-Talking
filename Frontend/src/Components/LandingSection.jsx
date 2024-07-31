@@ -76,7 +76,7 @@ export default function LandingSection() {
           marginTop: "-130px",
           marginLeft: "30px",
           marginRight: "30px",
-          bgcolor: "#ededed",
+
           display: "flex",
           gap: 4,
           justifyContent: "center",

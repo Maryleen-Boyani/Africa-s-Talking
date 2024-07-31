@@ -11,10 +11,6 @@ export default function AppBar() {
 
   const navigate = useNavigate();
 
-  function handleClick() {
-    navigate("/volunteer");
-  }
-
   function handleRegistration() {
     navigate("/registration");
   }
@@ -24,11 +20,11 @@ export default function AppBar() {
         display: "flex",
         justifyContent: "space-between",
         margin: "0",
-        padding: "0px"
+        padding: "0px",
       }}
     >
       <Box>
-        <Typography variant="h6" sx={{ marginLeft: 2 }}>
+        <Typography variant="h4" sx={{ marginLeft: 2, color: "#1d79d3" }}>
           ActivatedOps
         </Typography>
       </Box>
@@ -46,9 +42,6 @@ export default function AppBar() {
         </Button>
         <Button onClick={handleRegistration}>
           <Typography variant="h6">Register</Typography>
-        </Button>
-        <Button onClick={handleClick}>
-          <Typography variant="h6">Volunteer </Typography>
         </Button>
       </Box>
     </Box>

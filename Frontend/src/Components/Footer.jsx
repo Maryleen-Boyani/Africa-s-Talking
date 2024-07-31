@@ -10,11 +10,9 @@ export default function Footer() {
   };
 
   const navigate = useNavigate();
-  function handleClick(){
-    navigate("/volunteer")
-  }
-  function handleRegistration(){
-    navigate("/registration")
+
+  function handleRegistration() {
+    navigate("/registration");
   }
   return (
     <Box
@@ -26,7 +24,7 @@ export default function Footer() {
       }}
     >
       <Box>
-        <Typography variant="h6" sx={{ marginLeft: 2 }}>
+        <Typography variant="h4" sx={{ marginLeft: 2, color: "#1d79d3" }}>
           ActivatedOps
         </Typography>
       </Box>
@@ -46,9 +44,6 @@ export default function Footer() {
 
         <Button onClick={handleRegistration}>
           <Typography variant="h6">Register</Typography>
-        </Button>
-        <Button onClick={handleClick}>
-          <Typography variant="h6">Volunteer</Typography>
         </Button>
       </Box>
     </Box>
